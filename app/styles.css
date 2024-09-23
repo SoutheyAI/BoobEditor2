@@ -1,0 +1,106 @@
+/* 设置全局样式 */
+body {
+  font-family: Arial, sans-serif; /* 设置字体 */
+  background-color: #000; /* 设置背景颜色为黑色 */
+  color: #fff; /* 设置文本颜色为白色 */
+  margin: 0; /* 去除默认外边距 */
+  padding: 0; /* 去除默认内边距 */
+}
+
+/* 容器样式 */
+.container {
+  max-width: 1200px; /* 设置最大宽度 */
+  margin: 0 auto; /* 居中对齐 */
+  padding: 20px; /* 设置内边距 */
+}
+
+/* 页头样式 */
+.header {
+  text-align: center; /* 文本居中对齐 */
+  padding: 20px 0; /* 设置上下内边距 */
+  background-color: #333; /* 设置背景颜色 */
+  color: #fff; /* 设置文本颜色 */
+}
+
+/* 主体样式 */
+.main {
+  display: flex; /* 使用弹性布局 */
+  justify-content: space-between; /* 子元素之间均匀分布 */
+  padding: 20px 0; /* 设置上下内边距 */
+}
+
+/* 左侧文字部分样式 */
+.text-section {
+  width: 48%; /* 设置宽度 */
+}
+
+/* 输入框样式 */
+.input-box {
+  width: 100%; /* 宽度100% */
+  height: 150px; /* 高度150px */
+  padding: 10px; /* 设置内边距 */
+  margin-bottom: 10px; /* 设置下外边距 */
+  border: 1px solid #ccc; /* 设置边框 */
+  border-radius: 4px; /* 设置圆角 */
+  background-color: #333; /* 设置背景颜色 */
+  color: #fff; /* 设置文本颜色 */
+}
+
+/* 生成按钮样式 */
+.generate-button {
+  display: block; /* 块级元素 */
+  width: 100%; /* 宽度100% */
+  padding: 10px; /* 设置内边距 */
+  background-color: #007bff; /* 设置背景颜色 */
+  color: #fff; /* 设置文本颜色 */
+  border: none; /* 无边框 */
+  border-radius: 4px; /* 设置圆角 */
+  cursor: pointer; /* 鼠标指针样式 */
+}
+
+/* 生成按钮悬停样式 */
+.generate-button:hover {
+  background-color: #0056b3; /* 设置悬停时的背景颜色 */
+}
+
+/* 右侧图片部分样式 */
+.image-section {
+  width: 48%; /* 设置宽度 */
+  display: flex; /* 使用弹性布局 */
+  align-items: center; /* 垂直居中对齐 */
+  justify-content: center; /* 水平居中对齐 */
+}
+
+/* 示例图片样式 */
+.example-image {
+  max-width: 100%; /* 最大宽度100% */
+  max-height: 100%; /* 最大高度100% */
+  border-radius: 4px; /* 设置圆角 */
+}
+
+/* 输出框样式 */
+.output-box {
+  width: 100%; /* 宽度100% */
+  height: 300px; /* 高度300px */
+  background-color: #fff; /* 设置背景颜色 */
+  border: 1px solid #ccc; /* 设置边框 */
+  border-radius: 4px; /* 设置圆角 */
+  display: flex; /* 使用弹性布局 */
+  align-items: center; /* 垂直居中对齐 */
+  justify-content: center; /* 水平居中对齐 */
+}
+
+/* 输出图片样式 */
+.output-image {
+  max-width: 100%; /* 最大宽度100% */
+  max-height: 100%; /* 最大高度100% */
+  border-radius: 4px; /* 设置圆角 */
+}
+
+/* 页脚样式 */
+.footer {
+  text-align: center; /* 文本居中对齐 */
+  padding: 10px 0; /* 设置上下内边距 */
+  background-color: #333; /* 设置背景颜色 */
+  color: #fff; /* 设置文本颜色 */
+}

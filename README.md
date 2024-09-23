@@ -1,4 +1,4 @@
-# 项目名称
+# BoobEditor2
 
 ## 简介
 简要介绍项目的背景、目标和主要功能。
@@ -38,6 +38,18 @@
     ```
     // 这一步是启动项目
 
+### 配置 SMTP
+1. 获取 SMTP 提供商的配置信息（例如 SendGrid、Mailgun、Amazon SES 等）。
+2. 登录 Supabase 仪表板，进入 `Authentication` 设置。
+3. 在 `SMTP Settings` 部分，填写 SMTP 提供商的配置信息：
+    - `SMTP Host`：SMTP 主机地址
+    - `SMTP Port`：SMTP 端口
+    - `SMTP User`：SMTP 用户名
+    - `SMTP Pass`：SMTP 密码
+    - `SMTP Sender Name`：发送者名称
+    - `SMTP Sender Email`：发送者电子邮件地址
+4. 保存设置。
+
 ## 贡献
 欢迎贡献代码！请阅读 [CONTRIBUTING.md](CONTRIBUTING.md) 了解更多信息。
     // 这里鼓励其他开发者参与项目，并提供贡献指南的链接
@@ -54,4 +66,3 @@
     - 实现了功能2
     - 实现了功能3
     // 这里记录项目的版本历史和主要更新内容
-# BoobEditor2
