@@ -5,24 +5,27 @@ import './styles.css'; // 引入样式文件
 const AIEnlargerPage = () => {
   return (
     <div className="container">
-      {/* 页头部分 */}
-      <header className="header">
-        <h1>AI Boobs Enlarger</h1>
-        <p>使用我们的AI工具，根据文本描述生成定制的艺术作品。</p>
-      </header>
+      {/* 导航栏部分 */}
+      <nav className="navbar">
+        <div className="navbar-brand">BoobBeep</div>
+        <ul className="navbar-menu">
+          <li className="navbar-item"><a href="/blog">Blog</a></li>
+          <li className="navbar-item"><a href="/price">Price</a></li>
+        </ul>
+      </nav>
       
       {/* 主体部分 */}
       <main className="main">
         {/* 左侧文字部分 */}
         <section className="text-section">
-          <h2>输入你的想法</h2>
-          <textarea placeholder="在此输入你的艺术概念..." className="input-box"></textarea>
-          <button className="generate-button">生成</button>
+          <h1>AI Boobs Art Generator</h1>
+          <p>AI boobs art Generator helps you make your boobs more bigger in minutes. It's easy to generate custom tits use AI.</p>
+          <button className="cta-button">Have a try</button>
         </section>
         
         {/* 右侧图片部分 */}
         <section className="image-section">
-          <img src="/images/image1.png" alt="示例图片" className="example-image" />
+          <img src="/images/image1.png" alt="Image 1" className="example-image" />
         </section>
       </main>
       
@@ -36,7 +39,7 @@ const AIEnlargerPage = () => {
       
       {/* 页脚部分 */}
       <footer className="footer">
-        <p>© 2024 AI Boobs Enlarger. 保留所有权利。</p>
+        <p>© 2024 BoobBeep. 保留所有权利。</p>
       </footer>
     </div>
   );
