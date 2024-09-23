@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import './styles.css'; // 引入样式文件
 
 // 定义一个函数组件 AIEnlargerPage
@@ -19,13 +20,13 @@ const AIEnlargerPage = () => {
         {/* 左侧文字部分 */}
         <section className="text-section">
           <h1>AI Boobs Art Generator</h1>
-          <p>AI boobs art Generator helps you make your boobs more bigger in minutes. It's easy to generate custom tits use AI.</p>
+          <p>AI boobs art Generator helps you make your boobs more bigger in minutes. It&apos;s easy to generate custom tits use AI.</p>
           <button className="cta-button">Have a try</button>
         </section>
         
         {/* 右侧图片部分 */}
         <section className="image-section">
-          <img src="/images/image1.png" alt="Image 1" className="example-image" />
+          <Image src="/images/image1.png" alt="Image 1" className="example-image" width={500} height={500} />
         </section>
       </main>
       
