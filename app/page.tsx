@@ -247,17 +247,17 @@ const TestimonialSection = () => (
       <div style={testimonialStyles.testimonial}>
         <Image src="/images/sarah.jpg" alt="Sarah J." width={80} height={80} style={testimonialStyles.userImage} />
         <h3 style={testimonialStyles.userName}>Sarah J.</h3>
-        <p style={testimonialStyles.userComment}>"This AI tool is amazing! It helped me create stunning artwork in minutes."</p>
+        <p style={testimonialStyles.userComment}>&quot;This AI tool is amazing! It helped me create stunning artwork in minutes.&quot;</p>
       </div>
       <div style={testimonialStyles.testimonial}>
         <Image src="/images/Mike.jpg" alt="Mike R." width={80} height={80} style={testimonialStyles.userImage} />
         <h3 style={testimonialStyles.userName}>Mike R.</h3>
-        <p style={testimonialStyles.userComment}>"I'm impressed with the quality and speed. Definitely worth trying!"</p>
+        <p style={testimonialStyles.userComment}>&quot;I&apos;m impressed with the quality and speed. Definitely worth trying!&quot;</p>
       </div>
       <div style={testimonialStyles.testimonial}>
         <Image src="/images/man1.png" alt="John D." width={80} height={80} style={testimonialStyles.userImage} />
         <h3 style={testimonialStyles.userName}>John D.</h3>
-        <p style={testimonialStyles.userComment}>"The results are beyond my expectations. I highly recommend this service!"</p>
+        <p style={testimonialStyles.userComment}>&quot;The results are beyond my expectations. I highly recommend this service!&quot;</p>
       </div>
     </div>
   </section>
@@ -281,7 +281,7 @@ const AIEnlargerPage = () => {
         <div style={heroStyles.heroContent}>
           <h1 style={heroStyles.heroTitle}>AI Boobs Art Generator</h1>
           <p style={heroStyles.heroSubtitle}>
-            Transform your images with cutting-edge AI technology. Create stunning, customized breast enhancements in minutes. It's easy to generate custom tits using AI.
+            Transform your images with cutting-edge AI technology. Create stunning, customized breast enhancements in minutes. It&apos;s easy to generate custom tits using AI.
           </p>
           <button style={heroStyles.ctaButton}>Try AI Boobs Now</button>
           <p style={heroStyles.userCount}>Trusted by 10,000+ happy users</p>
