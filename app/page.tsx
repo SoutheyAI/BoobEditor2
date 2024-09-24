@@ -1,13 +1,61 @@
 import React from 'react';
 import Image from 'next/image';
-import './styles.css'; // Import styles
+import './styles.css';
+import FAQSection from './FAQSection';
+
+// 修改 hero 样式
+const heroStyles = {
+  heroSection: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '4rem 2rem',
+    backgroundColor: '#FFB6C1', // 改为与 Price section 相同的浅粉色背景
+  },
+  heroContent: {
+    flex: 1,
+    maxWidth: '600px',
+  },
+  heroTitle: {
+    fontSize: '3.5rem',
+    fontWeight: 'bold',
+    color: '#8B0000', // 改为深红色，与 Price section 标题颜色一致
+    marginBottom: '1rem',
+  },
+  heroSubtitle: {
+    fontSize: '1.2rem',
+    color: '#333', // 改为深灰色，提高可读性
+    marginBottom: '2rem',
+  },
+  ctaButton: {
+    backgroundColor: '#FF1493', // 改为深粉红色，与 Price section 按钮颜色一致
+    color: 'white',
+    border: 'none',
+    padding: '0.8rem 1.5rem',
+    fontSize: '1.2rem',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s ease',
+  },
+  heroImage: {
+    flex: 1,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  userCount: {
+    fontSize: '1rem',
+    color: '#333', // 改为深灰色，提高可读性
+    marginTop: '1rem',
+  },
+};
 
 // 修改内联样式
 const styles = {
   howToUse: {
     textAlign: 'center' as const,
     padding: '3rem 0',
-    // 移除了backgroundColor: '#ff69b4',
+    backgroundColor: '#FFF0F5', // 保持浅粉红色背景
   },
   sectionTitle: {
     fontSize: '3rem',
@@ -145,6 +193,76 @@ const PriceSection = () => (
   </section>
 );
 
+// 添加用户评价样式
+const testimonialStyles = {
+  testimonialSection: {
+    textAlign: 'center' as const,
+    padding: '3rem 0',
+    backgroundColor: '#FFF0F5', // 浅粉红色背景
+  },
+  testimonialTitle: {
+    fontSize: '2.5rem',
+    fontWeight: 'bold',
+    color: '#FF69B4',
+    marginBottom: '2rem',
+  },
+  testimonials: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap' as const,
+    gap: '2rem',
+  },
+  testimonial: {
+    width: '300px',
+    backgroundColor: 'white',
+    borderRadius: '10px',
+    padding: '1.5rem',
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    transition: 'transform 0.3s ease',
+  },
+  userImage: {
+    width: '80px',
+    height: '80px',
+    borderRadius: '50%',
+    margin: '0 auto 1rem',
+  },
+  userName: {
+    fontSize: '1.2rem',
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: '0.5rem',
+  },
+  userComment: {
+    fontSize: '1rem',
+    color: '#666',
+    fontStyle: 'italic',
+  },
+};
+
+// 用户评价组件
+const TestimonialSection = () => (
+  <section style={testimonialStyles.testimonialSection}>
+    <h2 style={testimonialStyles.testimonialTitle}>What Users Say About Us</h2>
+    <div style={testimonialStyles.testimonials}>
+      <div style={testimonialStyles.testimonial}>
+        <Image src="/images/sarah.jpg" alt="Sarah J." width={80} height={80} style={testimonialStyles.userImage} />
+        <h3 style={testimonialStyles.userName}>Sarah J.</h3>
+        <p style={testimonialStyles.userComment}>"This AI tool is amazing! It helped me create stunning artwork in minutes."</p>
+      </div>
+      <div style={testimonialStyles.testimonial}>
+        <Image src="/images/Mike.jpg" alt="Mike R." width={80} height={80} style={testimonialStyles.userImage} />
+        <h3 style={testimonialStyles.userName}>Mike R.</h3>
+        <p style={testimonialStyles.userComment}>"I'm impressed with the quality and speed. Definitely worth trying!"</p>
+      </div>
+      <div style={testimonialStyles.testimonial}>
+        <Image src="/images/man1.png" alt="John D." width={80} height={80} style={testimonialStyles.userImage} />
+        <h3 style={testimonialStyles.userName}>John D.</h3>
+        <p style={testimonialStyles.userComment}>"The results are beyond my expectations. I highly recommend this service!"</p>
+      </div>
+    </div>
+  </section>
+);
+
 // Define a functional component AIEnlargerPage
 const AIEnlargerPage = () => {
   return (
@@ -158,20 +276,20 @@ const AIEnlargerPage = () => {
         </ul>
       </nav>
       
-      {/* Main section */}
-      <main className="main">
-        {/* Left text section */}
-        <section className="text-section">
-          <h1>AI Boobs Art Generator</h1>
-          <p>AI boobs art generator helps you make your boobs bigger in minutes. It's easy to generate custom tits using AI.</p>
-          <button className="cta-button">Have a try</button>
-        </section>
-        
-        {/* Right image section */}
-        <section className="image-section">
-          <Image src="/images/image1.png" alt="Image 1" className="example-image" width={500} height={500} />
-        </section>
-      </main>
+      {/* Hero section */}
+      <section style={heroStyles.heroSection}>
+        <div style={heroStyles.heroContent}>
+          <h1 style={heroStyles.heroTitle}>AI Boobs Art Generator</h1>
+          <p style={heroStyles.heroSubtitle}>
+            Transform your images with cutting-edge AI technology. Create stunning, customized breast enhancements in minutes. It's easy to generate custom tits using AI.
+          </p>
+          <button style={heroStyles.ctaButton}>Try AI Boobs Now</button>
+          <p style={heroStyles.userCount}>Trusted by 10,000+ happy users</p>
+        </div>
+        <div style={heroStyles.heroImage}>
+          <Image src="/images/image1.png" alt="AI Boobs Example" width={500} height={500} />
+        </div>
+      </section>
       
       {/* How To Use section */}
       <section style={styles.howToUse}>
@@ -194,6 +312,12 @@ const AIEnlargerPage = () => {
       
       {/* 新增 Price section */}
       <PriceSection />
+      
+      {/* 新增 What Users Say About 部分 */}
+      <TestimonialSection />
+      
+      {/* FAQ 部分 */}
+      <FAQSection />
       
       {/* Footer section */}
       <footer className="footer">
