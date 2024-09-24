@@ -1,5 +1,9 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
+import { useSession, signIn, signOut } from "next-auth/react";
+import { SessionProvider } from "next-auth/react";
 import './styles.css';
 import FAQSection from './FAQSection';
 
@@ -265,6 +269,8 @@ const TestimonialSection = () => (
 
 // Define a functional component AIEnlargerPage
 const AIEnlargerPage = () => {
+  const { data: session } = useSession();
+
   return (
     <div className="container">
       {/* Navbar section */}
@@ -273,6 +279,15 @@ const AIEnlargerPage = () => {
         <ul className="navbar-menu">
           <li className="navbar-item"><a href="/blog">Blog</a></li>
           <li className="navbar-item"><a href="/price">Price</a></li>
+          {session ? (
+            <li className="navbar-item">
+              <button onClick={() => signOut()}>Sign out</button>
+            </li>
+          ) : (
+            <li className="navbar-item">
+              <button onClick={() => signIn('google')}>Sign in with Google</button>
+            </li>
+          )}
         </ul>
       </nav>
       
@@ -287,7 +302,7 @@ const AIEnlargerPage = () => {
           <p style={heroStyles.userCount}>Trusted by 10,000+ happy users</p>
         </div>
         <div style={heroStyles.heroImage}>
-          <Image src="/images/image1.png" alt="AI Boobs Example" width={500} height={500} />
+          <Image src="/images/image2.png" alt="AI Boobs Example" width={500} height={500} />
         </div>
       </section>
       
@@ -328,4 +343,10 @@ const AIEnlargerPage = () => {
 };
 
 // Export component
-export default AIEnlargerPage;
+export default function Page() {
+  return (
+    <SessionProvider>
+      <AIEnlargerPage />
+    </SessionProvider>
+  );
+}
