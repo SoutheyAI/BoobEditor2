@@ -1,0 +1,112 @@
+.pageContainer {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem 0;
+  background-color: #2E0854; /* 深紫色背景 */
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  padding: 2rem;
+  background-color: #FFB6C1; /* 保持中间部分的浅粉色背景 */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.3); /* 柔和的粉色阴影 */
+}
+
+.title {
+  text-align: center;
+  color: #8B0000;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 2rem;
+}
+
+.uploadSection,
+.sizeSection {
+  margin-bottom: 1.5rem;
+}
+
+.fileUploadLabel {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: #FF1493; /* 保持深粉红色 */
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.fileUploadLabel:hover {
+  background-color: #FF69B4; /* 更浅的粉红色作为悬停效果 */
+}
+
+.fileInput {
+  display: none;
+}
+
+.sizeSelect {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #FF1493;
+  border-radius: 5px;
+  background-color: white;
+  color: #333;
+}
+
+.submitButton {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: #FF1493; /* 保持深粉红色 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #FF69B4; /* 更浅的粉红色作为悬停效果 */
+}
+
+.resultSection {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.resultImage {
+  max-width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.imagePreview {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.previewImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 20, 147, 0.3); /* 柔和的粉红色阴影 */
+}

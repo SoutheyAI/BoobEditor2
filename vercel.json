@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "package.json", "use": "@vercel/next" },
+    { "src": "api/*.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/api/generate-boobs-image", "dest": "api/generate_boobs_image.py" },
+    { "src": "/(.*)", "dest": "/" }
+  ],
+  "env": {
+    "APP_CLIENT": "@app_client",
+    "APP_KEY": "@app_key",
+    "BASE_URL": "@base_url"
+  }
+}
