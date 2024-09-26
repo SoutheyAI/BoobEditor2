@@ -124,5 +124,4 @@ async def big_boom(file_path, size):
         logger.error(traceback.format_exc())
         return None
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)  # 运行Flask应用
+app = app
